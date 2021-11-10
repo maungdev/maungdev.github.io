@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    
+    background: black;
+
+}
+.navbar-menu{
+    background: #1b1b1b;
+}
+.navbar-menu:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+.navbar-menu .logo{
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+    
+
+}
+.navbar-menu ul{
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+.navbar-menu ul li{
+    float: none;
+    display: inline-block;
+    background: #1b1b1b;
+    margin: 0 5px;
+}
+.navbar-menu ul li a{
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+.navbar-menu ul li a:hover{
+    color: hsl(330, 100%, 60%);
+    border-radius: 5px;
+    box-shadow: 0 0 5px hsl(330, 100%, 60%),
+                0 0 5px hsl(330, 100%, 60%);
+}
+.navbar-menu ul ul li a:hover{
+    color: hsl(330, 100%, 60%);
+    box-shadow: none;
+}
+.navbar-menu ul ul{
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid hsl(330, 100%, 60%);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.navbar-menu ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+.navbar-menu ul ul li{
+    position: relative;   
+    margin: 0px;
+    width: auto;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.navbar-menu ul ul li a{
+    line-height: 50px;
+}
+.home-h1{
+    color: white;
+    text-align: center;
+}
+.html-logo{
+    width: 30%;
+    margin: 0px auto;
+    display: block;
+}
+
