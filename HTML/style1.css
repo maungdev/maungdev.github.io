@@ -87,8 +87,12 @@ body{
     text-align: center;
 }
 .html-logo{
-    width: 30%;
+    width: 25%;
     margin: 0px auto;
     display: block;
+}
+.footer-p{
+    color: white;
+    text-align: center;
 }
 
