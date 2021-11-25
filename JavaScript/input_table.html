@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Input Table Assignment</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+        button{
+            color: white;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Data Input Table Assignment</h1>
+
+    <div align="center">
+
+        <table cellspacing="0" cellpadding="8">
+
+        <tr>
+            <td>
+                <label for="name">Name:</label>
+            </td>
+            <td>
+                <input type="text" name="you_name" id="name" placeholder="Enter Your Name" required>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <label for="age">Age:</label>
+            </td>
+            <td>
+                <input type="number" name="you_age" id="age" placeholder="Enter Your Age" required>
+            </td>
+        </tr>
+
+        <!-- <tr>
+            <td>
+                <label for="email">Email:</label>
+            </td>
+            <td>
+                <input type="email" name="you_email" id="email" placeholder="Enter Your Email" required>
+            </td>
+        </tr> -->
+
+        </table>
+
+    </div>
+    <br>
+
+    <div align="center">
+        <button type="submit" onclick="showTable()" style="background-color: blue;" class="button" onmouseover="mouseClick()" onmouseout="mouseOut()" id="button">ADD</button>
+    </div>
+    <br><br>
+
+    <div align="center">
+        <table border="1" cellspacing="0" cellpadding="20">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th width="150px">Name</th>
+                    <th>Age</th>
+                    <!-- <th width="220px">Email</th> -->
+                </tr>
+            </thead>
+            <tbody id="tbody" align="center">
+
+            </tbody>
+        </table>
+    </div>
+    <br><br>
+    
+
+    <script>
+        
+        let i = 1;
+
+        function showTable(){
+            let data = [{
+                name:document.getElementById('name').value,
+                age:document.getElementById('age').value,
+                // email:document.getElementById('email').value,
+
+            }];
+            
+            let tbody = document.querySelector("#tbody");
+            let myData = '';
+            //let tbody = document.getElementById('tbody');
+            let tbody_data = document.createElement('tr');
+            
+
+            
+            for (let row of data){
+                myData += `<tr>
+                        <td>${i++}</td>
+                        <td>${row.name}</td>
+                        <td>${row.age}</td>
+                        
+                    </tr>`
+            }                  
+            tbody_data.innerHTML = myData;
+            tbody.appendChild(tbody_data);
+        }
+
+        function mouseClick(){
+            let button = document.getElementById('button');
+            button.style.width = "80px"
+            button.style.height = "40px"
+            button.style.backgroundColor = "black";
+        }
+
+        function mouseOut(){
+            let button = document.getElementById('button')
+            button.style.width = "auto";
+            button.style.height = "auto";
+            button.style.backgroundColor = "blue";
+        }
+
+    </script>
+
+    <!-- <table cellspacing="0" cellpadding="8">
+        <tr>
+            <td>
+                <label for="">Name:</label>
+            </td>
+            <td>
+                <input type="text" name="you_name" id="name" required>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <label for="">Age:</label>
+            </td>
+            <td>
+                <input type="text" name="you_age" id="age" required>
+            </td>
+        </tr>
+    </table><br>
+    <button type="button" onclick="adding()">Add</button>
+    <br><br>
+
+    <table border="1" cellspacing="0" cellpadding="20" id="show" >
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Age</th>
+                
+            </tr>
+        </thead>
+    </table>
+
+    <script>
+        var list1 = [];
+        var list2 = [];
+        var list3 = [];
+
+        var a = 1;
+        var b = 0;
+        var i = 1;
+
+        function adding(){
+           var Addrown = document.getElementById('show') ;
+           
+           var NewRow = Addrown.insertRow(a);
+
+           list1[b] = (i++);
+           list2[b] = document.getElementById("name").value;
+           list3[b] = document.getElementById("age").value;
+
+            var cel1 = NewRow.insertCell(0);
+		    var cel2 = NewRow.insertCell(1);
+			var cel3 = NewRow.insertCell(2);
+
+            cel1.innerHTML = list1[b];
+            cel2.innerHTML = list2[b];
+            cel3.innerHTML = list3[b];
+
+            a++;
+            b++;
+            
+            
+
+        } -->
+
+    </script>
+
+</body>
+</html>
